@@ -95,3 +95,57 @@ Route::group(['prefix' => 'profile', 'as' => 'profile.', 'namespace' => 'Auth', 
         Route::post('profile/destroy', 'ChangePasswordController@destroy')->name('password.destroyProfile');
     }
 });
+
+
+// Users Side
+
+Route::get('/', function () {
+    return view('users/content');
+});
+
+Route::get('/friend', function () {
+    return view('users/friend/friend');
+});
+
+Route::get('/journal', function () {
+    return view('users/journal/journal');
+});
+
+Route::get('/event', function () {
+    return view('users/event/event');
+});
+
+
+Route::get('/profile', function () {
+    return view('users/profile/profile');
+});
+
+Route::get('/settings', function () {
+    return view('users/setting/settings');
+});
+
+Route::get('/calender', function () {
+    return view('users/calender');
+});
+
+
+Route::get('/folder-photo', function () {
+    return view('users/photo/folder-photo');
+});
+
+Route::get('/folder-journal', function () {
+    return view('users/journal/folder-journal');
+});
+
+Route::get('/register', function () {
+    return view('users/register');
+});
+
+Route::get('/login', function () {
+    return view('users/login');
+});
+
+Route::get('/resetpassword', function () {
+    return view('users/resetpassword');
+});
+
